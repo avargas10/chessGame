@@ -6,7 +6,7 @@ public  interface IConstants {
 	public static String dataType = "dataType";
 	public static String K_function = "K_function";
 	public static String K_pasos = "K_pasos";
-	public static String K_letra = "K_letra";
+	public static String K_chess = "K_letra";
 	public static String V_hayobjecto = "V_hayobjecto";
 	public static String V_sujete = "V_sujete";
 	public static String V_write = "V_write";
