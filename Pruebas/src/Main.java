@@ -5,8 +5,8 @@ public class Main {
 		// TODO Auto-generated method stub
 		String L = "LETRA A";
 	    String l1 = L.split("LETRA")[1];
-	    
-	    System.out.println("1: "+l1);
+	    System.out.println("112w: "+l1);
+	    System.out.println("112w: "+l1);
 	}
 
 }
