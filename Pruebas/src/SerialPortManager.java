@@ -15,11 +15,13 @@ public class SerialPortManager extends Thread  implements SerialPortDataListener
 	private SerialPort _port;
 	private String[] _ports;
 	private String _info;
+	private String _prueba;
 	private SerialPortManager(){
 	}
 	
 	public static SerialPortManager getInstance(){
 		if(_instance ==null){
+			
 			_instance= new SerialPortManager();
 		}
 		return _instance;
