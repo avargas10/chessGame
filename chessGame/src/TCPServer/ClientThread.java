@@ -19,6 +19,7 @@ public class ClientThread implements Runnable {
 	public PrintStream streamOut;
 	private Thread thread;
 	public ServerReader reader;
+	public ServerWriter writer;
 	private static ArrayList<Socket> clientes = new ArrayList<Socket>();
 	
 
@@ -41,9 +42,11 @@ public class ClientThread implements Runnable {
 			output = new PrintWriter(threadSocket.getOutputStream(),true);
 			input = new BufferedReader(new InputStreamReader(threadSocket.getInputStream()));
 			streamOut = new PrintStream(threadSocket.getOutputStream(), true);
-			ServerWriter writer = ServerWriter.setserverwriter(this);
+			writer = ServerWriter.setserverwriter(this);
 			reader = new ServerReader(this);
 			reader.Thread();
+			ServerMessageSend sender = new ServerMessageSend(this);
+			sender.setVisible(true);
 			
 		}
 		catch(Exception e){
